@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donna Patricia Hester - Professional Certificate</title>
+    <meta
+      name="description"
+      content="Professional certificate for Donna Patricia Hester - Investment Consultant"
+    />
+    <script src="https://cdn.tailwindcss.com?version=3.4.7"></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @media print {
+        body {
+          margin: 0;
+        }
+        .certificate {
+          box-shadow: none !important;
+          border: 2px solid #000 !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+
+      .certificate-watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 8rem;
+        font-weight: bold;
+        color: rgba(251, 191, 36, 0.1);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .certificate-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .certificate-border-pattern {
+        background-image: linear-gradient(
+            45deg,
+            transparent 30%,
+            rgba(251, 191, 36, 0.1) 50%,
+            transparent 70%
+          ),
+          linear-gradient(
+            -45deg,
+            transparent 30%,
+            rgba(251, 191, 36, 0.1) 50%,
+            transparent 70%
+          );
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-amber-50 to-yellow-100 min-h-screen">
+    <!-- Navigation -->
+    <nav
+      class="bg-white/80 backdrop-blur-md border-b border-amber-200 p-4 mb-8"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-amber-600 hover:text-amber-700 transition-colors"
+        >
+          ← Back to Portfolio
+        </a>
+        <button
+          onclick="window.print()"
+          class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg transition-colors no-print"
+        >
+          Print Certificate
+        </button>
+      </div>
+    </nav>
+
+    <!-- Certificate Container -->
+    <div class="container mx-auto px-4 pb-16">
+      <div class="max-w-4xl mx-auto">
+        <!-- Certificate -->
+        <div
+          class="certificate certificate-border-pattern relative overflow-hidden"
+        >
+          <!-- Watermark -->
+          <div class="certificate-watermark">CERTIFIED</div>
+
+          <!-- Certificate Content -->
+          <div class="certificate-content">
+            <!-- Header -->
+            <div class="text-center mb-12">
+              <div
+                class="w-24 h-24 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  class="w-12 h-12 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h1 class="text-4xl font-bold text-amber-800 mb-2">
+                Certificate of Achievement
+              </h1>
+              <p class="text-xl text-amber-700">This is to certify that</p>
+            </div>
+
+            <!-- Recipient Name -->
+            <div class="text-center mb-8">
+              <h2 class="text-5xl font-bold text-gray-800 mb-4">
+                Donna Patricia Hester
+              </h2>
+              <p class="text-2xl text-amber-700">
+                has successfully completed the requirements for
+              </p>
+            </div>
+
+            <!-- Certificate Title -->
+            <div class="text-center mb-12">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Certified Investment & Trading Consultant
+              </h3>
+              <p class="text-xl text-gray-600">
+                Specializing in Crypto, Stocks & Multi-Asset Portfolio
+                Management
+              </p>
+            </div>
+
+            <!-- Certificate Details -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+              <div class="text-center">
+                <h4 class="text-lg font-semibold text-amber-700 mb-2">
+                  Certificate ID
+                </h4>
+                <p class="text-2xl font-mono text-gray-800">62160A</p>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-semibold text-amber-700 mb-2">
+                  Issue Date
+                </h4>
+                <p class="text-2xl font-mono text-gray-800">August 22, 2025</p>
+              </div>
+            </div>
+
+            <!-- Additional Details -->
+            <div class="text-center mb-12">
+              <div
+                class="inline-block bg-amber-100 rounded-lg p-6 border-2 border-amber-300"
+              >
+                <h4 class="text-lg font-semibold text-amber-800 mb-2">
+                  Professional Focus Areas
+                </h4>
+                <div class="grid grid-cols-2 gap-4 text-sm text-amber-700">
+                  <div>• Portfolio Strategy</div>
+                  <div>• Risk Management</div>
+                  <div>• Crypto Integration</div>
+                  <div>• Execution Advisory</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="grid md:grid-cols-2 gap-8 items-end">
+              <div class="text-center">
+                <div class="border-t-2 border-amber-400 pt-2">
+                  <p class="text-sm text-amber-700">Certificate Issuer</p>
+                  <p class="font-semibold text-gray-800">
+                    Investment Advisory Board
+                  </p>
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="border-t-2 border-amber-400 pt-2">
+                  <p class="text-sm text-amber-700">Valid Until</p>
+                  <p class="font-semibold text-gray-800">August 22, 2028</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verification Note -->
+            <div
+              class="text-center mt-12 p-4 bg-amber-50 rounded-lg border border-amber-200"
+            >
+              <p class="text-sm text-amber-700">
+                This certificate can be verified through our official
+                verification system.<br />
+                For verification, please contact: verification@donnahester.com
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate Seal -->
+          <div class="certificate-seal">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Certificate Information -->
+        <div class="mt-12 bg-white rounded-2xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">
+            About This Certification
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-3">
+                Certification Requirements
+              </h4>
+              <ul class="space-y-2 text-gray-600">
+                <li>• Minimum 5 years of investment experience</li>
+                <li>
+                  • Completion of advanced portfolio management coursework
+                </li>
+                <li>• Demonstrated expertise in multi-asset strategies</li>
+                <li>• Compliance with regulatory standards</li>
+                <li>• Ongoing professional development commitment</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-3">
+                Professional Standards
+              </h4>
+              <ul class="space-y-2 text-gray-600">
+                <li>• FINRA compliance and regulation</li>
+                <li>• Ethical investment practices</li>
+                <li>• Client fiduciary responsibility</li>
+                <li>• Risk management protocols</li>
+                <li>• Continuous market education</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Options -->
+        <div class="mt-8 text-center space-y-4">
+          <p class="text-gray-600">
+            Download this certificate in different formats:
+          </p>
+          <div class="flex justify-center space-x-4">
+            <button
+              onclick="window.print()"
+              class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Print Certificate
+            </button>
+            <a
+              href="assets/profile.pdf"
+              download
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Download Full Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-400">
+          © <span id="copyright-year">2024</span> Donna Patricia Hester. All
+          rights reserved.
+        </p>
+        <p class="text-sm text-gray-500 mt-2">
+          This certificate represents professional achievement and ongoing
+          commitment to excellence in investment consulting.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Update copyright year
+      document.getElementById("copyright-year").textContent =
+        new Date().getFullYear();
+
+      // Add print functionality
+      function printCertificate() {
+        window.print();
+      }
+
+      // Add some interactive elements
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add subtle animation to certificate
+        const certificate = document.querySelector(".certificate");
+        certificate.classList.add("fade-in");
+
+        // Add hover effect to seal
+        const seal = document.querySelector(".certificate-seal");
+        seal.addEventListener("mouseenter", function () {
+          this.style.transform = "scale(1.1) rotate(5deg)";
+        });
+        seal.addEventListener("mouseleave", function () {
+          this.style.transform = "scale(1) rotate(0deg)";
+        });
+      });
+    </script>
+  </body>
+</html>
+
+

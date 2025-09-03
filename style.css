@@ -1,0 +1,1466 @@
+/* Custom Styles for Donna Patricia Hester Portfolio */
+
+/* Remove Default Margins and Padding */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Button Styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-6 rounded-lg border-2 border-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply text-gray-700 hover:text-blue-600 transition-colors duration-300 relative;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Service Cards */
+.service-card {
+  @apply bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col justify-between min-h-[280px];
+}
+
+.service-card:hover {
+  @apply border-blue-200;
+}
+
+/* Equal Height Cards */
+.service-card h3 {
+  @apply text-xl font-bold mb-3;
+}
+
+.service-card p {
+  @apply text-gray-600 mb-4 flex-grow;
+}
+
+.service-card button {
+  @apply mt-auto font-semibold;
+}
+
+/* Credentials Section Equal Height */
+.credentials-card {
+  @apply flex flex-col h-full;
+}
+
+.credentials-card .content {
+  @apply flex-grow;
+}
+
+/* Enhanced Form Inputs */
+.form-input {
+  @apply w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-medium text-base;
+}
+
+.form-input:focus {
+  @apply outline-none transform scale-[1.02];
+}
+
+.form-input::placeholder {
+  @apply text-gray-500 font-medium;
+}
+
+/* Large Form Inputs for Contact Section */
+.form-input-large {
+  @apply w-full px-8 py-6 border-3 border-gray-200 rounded-2xl focus:ring-6 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-semibold text-lg;
+}
+
+.form-input-large:focus {
+  @apply outline-none transform scale-[1.01] shadow-xl;
+}
+
+.form-input-large::placeholder {
+  @apply text-gray-500 font-medium;
+}
+
+/* Contact Section Enhanced */
+.contact-section {
+  @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50;
+}
+
+.contact-form {
+  @apply bg-white rounded-3xl shadow-2xl p-8 border border-gray-100;
+}
+
+.contact-form label {
+  @apply text-gray-700 font-bold text-sm uppercase tracking-wide mb-2 block;
+}
+
+.contact-form button {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  width: 300%;
+}
+
+#hero-carousel .carousel-container {
+  width: 300%;
+}
+
+#results-carousel .carousel-container {
+  width: 400%;
+}
+
+/* Carousel Dots */
+.carousel-dot {
+  @apply transition-all duration-300 cursor-pointer;
+}
+
+.carousel-dot.active {
+  @apply bg-blue-600;
+}
+
+/* Counter Animation */
+.counter-animate {
+  animation: countUp 2s ease-out forwards;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Theme Styles */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .bg-white {
+  @apply bg-gray-800 !important;
+}
+
+.dark .bg-gray-50 {
+  @apply bg-gray-900 !important;
+}
+
+.dark .bg-gray-100 {
+  @apply bg-gray-800 !important;
+}
+
+.dark .text-gray-900 {
+  @apply text-white !important;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300 !important;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-300 !important;
+}
+
+.dark .border-gray-200 {
+  @apply border-gray-700 !important;
+}
+
+.dark .border-gray-300 {
+  @apply border-gray-600 !important;
+}
+
+/* Dark Mode Navigation */
+.dark header {
+  @apply bg-gray-800/80 border-gray-700;
+}
+
+.dark .nav-link {
+  @apply text-gray-300 hover:text-blue-400;
+}
+
+.dark .nav-link::after {
+  @apply bg-blue-400;
+}
+
+.dark #theme-toggle {
+  @apply hover:bg-gray-700;
+}
+
+.dark #theme-toggle svg {
+  @apply text-gray-300;
+}
+
+.dark #mobile-menu {
+  @apply bg-gray-800/95 border-gray-700;
+}
+
+.dark #mobile-menu .nav-link {
+  @apply hover:bg-gray-700;
+}
+
+/* Dark Mode Enhanced */
+.dark .bg-blue-50 {
+  @apply bg-blue-900/20 !important;
+}
+
+.dark .bg-indigo-50 {
+  @apply bg-indigo-900/20 !important;
+}
+
+.dark .bg-purple-50 {
+  @apply bg-purple-900/20 !important;
+}
+
+.dark .bg-green-50 {
+  @apply bg-green-900/20 !important;
+}
+
+.dark .bg-emerald-50 {
+  @apply bg-emerald-900/20 !important;
+}
+
+.dark .bg-violet-50 {
+  @apply bg-violet-900/20 !important;
+}
+
+.dark .bg-amber-50 {
+  @apply bg-amber-900/20 !important;
+}
+
+.dark .bg-yellow-50 {
+  @apply bg-yellow-900/20 !important;
+}
+
+.dark .border-blue-200 {
+  @apply border-blue-700;
+}
+
+.dark .border-green-200 {
+  @apply border-green-700;
+}
+
+.dark .border-purple-200 {
+  @apply border-purple-700;
+}
+
+.dark .border-amber-200 {
+  @apply border-amber-700;
+}
+
+.dark .border-amber-300 {
+  @apply border-amber-600;
+}
+
+.dark .border-amber-400 {
+  @apply border-amber-600;
+}
+
+.dark .text-blue-600 {
+  @apply text-blue-400;
+}
+
+.dark .text-green-600 {
+  @apply text-green-400;
+}
+
+.dark .text-purple-600 {
+  @apply text-purple-400;
+}
+
+.dark .text-amber-500 {
+  @apply text-amber-400;
+}
+
+.dark .text-blue-900 {
+  @apply text-blue-200;
+}
+
+.dark .text-blue-700 {
+  @apply text-blue-300;
+}
+
+.dark .text-blue-600 {
+  @apply text-blue-400;
+}
+
+.dark .text-green-800 {
+  @apply text-green-200;
+}
+
+.dark .text-purple-800 {
+  @apply text-purple-200;
+}
+
+.dark .text-amber-600 {
+  @apply text-amber-400;
+}
+
+.dark .bg-blue-100 {
+  @apply bg-blue-800;
+}
+
+.dark .bg-green-100 {
+  @apply bg-green-800;
+}
+
+.dark .bg-purple-100 {
+  @apply bg-purple-800;
+}
+
+.dark .bg-amber-100 {
+  @apply bg-amber-800;
+}
+
+.dark .bg-yellow-100 {
+  @apply bg-yellow-800;
+}
+
+.dark .bg-indigo-100 {
+  @apply bg-indigo-800;
+}
+
+.dark .bg-violet-100 {
+  @apply bg-violet-800;
+}
+
+.dark .bg-emerald-100 {
+  @apply bg-emerald-800;
+}
+
+/* Dark Mode Service Cards */
+.dark .service-card {
+  @apply bg-gray-800 border-gray-700 !important;
+}
+
+.dark .service-card:hover {
+  @apply border-blue-600 !important;
+}
+
+.dark .service-card h3 {
+  @apply text-white !important;
+}
+
+.dark .service-card p {
+  @apply text-gray-300 !important;
+}
+
+.dark .service-card button {
+  @apply text-blue-400 hover:text-blue-300 !important;
+}
+
+/* Dark Mode Credentials Section */
+.dark .credentials-card .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .credentials-card .bg-blue-50 {
+  @apply bg-blue-900/30;
+}
+
+/* Dark Mode Footer */
+.dark footer {
+  @apply bg-gray-900;
+}
+
+.dark footer .border-gray-700 {
+  @apply border-gray-600;
+}
+
+/* Dark Mode Contact Section */
+.dark .contact-section {
+  @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900;
+}
+
+.dark .contact-section .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark .contact-section .text-gray-900 {
+  @apply text-white;
+}
+
+.dark .contact-section .text-gray-700 {
+  @apply text-gray-300;
+}
+
+.dark .contact-section .text-gray-600 {
+  @apply text-gray-400;
+}
+
+.dark .contact-section .text-gray-500 {
+  @apply text-gray-400;
+}
+
+.dark .contact-section .border-gray-100 {
+  @apply border-gray-700;
+}
+
+.dark .contact-section .border-gray-200 {
+  @apply border-gray-600;
+}
+
+.dark .contact-section .bg-blue-100 {
+  @apply bg-blue-900/30;
+}
+
+.dark .contact-section .bg-green-100 {
+  @apply bg-green-900/30;
+}
+
+.dark .contact-section .bg-purple-100 {
+  @apply bg-purple-900/30;
+}
+
+.dark .contact-section .text-blue-600 {
+  @apply text-blue-400;
+}
+
+.dark .contact-section .text-green-600 {
+  @apply text-green-400;
+}
+
+.dark .contact-section .text-purple-600 {
+  @apply text-purple-400;
+}
+
+.dark .contact-section .text-blue-900 {
+  @apply text-blue-200;
+}
+
+.dark .contact-section .text-blue-800 {
+  @apply text-blue-300;
+}
+
+/* Modal Styles */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Dark Mode Modal */
+.dark #service-modal .bg-white {
+  @apply bg-gray-800;
+}
+
+.dark #service-modal .text-gray-400 {
+  @apply text-gray-300;
+}
+
+.dark #service-modal .hover\:text-gray-600:hover {
+  @apply hover:text-gray-200;
+}
+
+/* Focus Management */
+.focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Enhanced Mobile & Desktop Responsiveness */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+
+  h1 {
+    @apply text-3xl leading-tight font-bold;
+  }
+
+  h2 {
+    @apply text-2xl leading-tight font-bold;
+  }
+
+  h3 {
+    @apply text-xl leading-tight font-semibold;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply py-3 px-6 text-sm w-full font-bold;
+  }
+
+  .hero-section {
+    @apply pt-16 pb-8;
+  }
+
+  .hero-section h1 {
+    @apply text-4xl leading-tight font-black;
+  }
+
+  .hero-section h2 {
+    @apply text-xl leading-tight font-bold;
+  }
+
+  .hero-section p {
+    @apply text-lg font-medium;
+  }
+
+  .carousel-container {
+    @apply h-64;
+  }
+
+  .service-card {
+    @apply p-4;
+  }
+
+  .grid-cols-3 {
+    @apply grid-cols-1;
+  }
+
+  .grid-cols-2 {
+    @apply grid-cols-1;
+  }
+
+  .text-5xl {
+    @apply text-3xl;
+  }
+
+  .text-4xl {
+    @apply text-2xl;
+  }
+
+  .text-3xl {
+    @apply text-xl;
+  }
+
+  .text-2xl {
+    @apply text-lg;
+  }
+
+  .text-xl {
+    @apply text-base;
+  }
+
+  .space-y-6 > * + * {
+    @apply mt-4;
+  }
+
+  .space-y-8 > * + * {
+    @apply mt-6;
+  }
+
+  .space-y-12 > * + * {
+    @apply mt-8;
+  }
+
+  .space-y-16 > * + * {
+    @apply mt-12;
+  }
+
+  .py-16 {
+    @apply py-8;
+  }
+
+  .py-12 {
+    @apply py-6;
+  }
+
+  .py-8 {
+    @apply py-4;
+  }
+
+  .gap-12 {
+    @apply gap-4;
+  }
+
+  .gap-8 {
+    @apply gap-3;
+  }
+
+  .gap-6 {
+    @apply gap-2;
+  }
+
+  .gap-4 {
+    @apply gap-2;
+  }
+
+  /* Remove extra whitespace */
+  body {
+    @apply m-0 p-0;
+  }
+
+  .container {
+    @apply w-full max-w-none;
+  }
+
+  section {
+    @apply w-full;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .container {
+    @apply px-6;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply py-2 px-5 text-sm;
+  }
+
+  .hero-section h1 {
+    @apply text-5xl;
+  }
+
+  .carousel-container {
+    @apply h-80;
+  }
+
+  .grid-cols-3 {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    @apply px-8;
+  }
+
+  .hero-section h1 {
+    @apply text-5xl;
+  }
+
+  .carousel-container {
+    @apply h-96;
+  }
+
+  .grid-cols-3 {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    @apply px-4 max-w-7xl;
+  }
+
+  .hero-section h1 {
+    @apply text-6xl;
+  }
+
+  .carousel-container {
+    @apply h-[28rem];
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    @apply text-black bg-white;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply bg-white text-black border border-black;
+  }
+}
+
+/* Accessibility Improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Loading States */
+.loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+.loading::after {
+  content: "";
+  @apply absolute inset-0 bg-gray-200 animate-pulse rounded;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  @apply transform -translate-y-1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-700;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Certificate Template Styles */
+.certificate {
+  @apply bg-gradient-to-br from-yellow-50 to-amber-100 p-8 rounded-2xl border-4 border-amber-300 shadow-2xl;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(251, 191, 36, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(251, 191, 36, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+.certificate-seal {
+  @apply absolute top-4 right-4 w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-sm;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+}
+
+.certificate-border {
+  @apply border-2 border-amber-400 rounded-lg p-6 relative;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(251, 191, 36, 0.1) 50%,
+    transparent 70%
+  );
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 640px) {
+  .grid {
+    @apply grid-cols-1;
+  }
+
+  .container {
+    @apply px-4;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-cols-3 {
+    @apply grid-cols-2;
+  }
+
+  .container {
+    @apply px-6;
+  }
+}
+
+/* Mobile-First Container System */
+.container {
+  @apply w-full mx-auto px-4;
+}
+
+@media (min-width: 640px) {
+  .container {
+    @apply px-6;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    @apply px-8;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    @apply px-4 max-w-6xl;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    @apply max-w-7xl;
+  }
+}
+
+/* Better Flex Wrapping */
+.flex-wrap-container {
+  @apply flex flex-wrap;
+}
+
+.flex-wrap-container > * {
+  @apply flex-shrink-0;
+}
+
+/* Mobile Grid Improvements */
+@media (max-width: 640px) {
+  .grid {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .flex-wrap-container {
+    @apply gap-3;
+  }
+
+  .service-card {
+    @apply min-h-[240px] p-4;
+  }
+
+  .credentials-card {
+    @apply min-h-[300px];
+  }
+
+  /* Better mobile spacing */
+  .space-y-6 > * + * {
+    @apply mt-4;
+  }
+
+  .space-y-8 > * + * {
+    @apply mt-6;
+  }
+
+  .space-y-12 > * + * {
+    @apply mt-8;
+  }
+
+  .space-y-16 > * + * {
+    @apply mt-12;
+  }
+}
+
+/* Tablet Grid Improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-cols-3 {
+    @apply grid-cols-2 gap-6;
+  }
+
+  .service-card {
+    @apply min-h-[260px];
+  }
+}
+
+/* Enhanced Mobile Spacing */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply py-8;
+  }
+
+  .section-margin {
+    @apply mb-8;
+  }
+
+  /* Better mobile section spacing */
+  section {
+    @apply w-full px-0;
+  }
+
+  .container {
+    @apply w-full max-w-none px-4;
+  }
+
+  /* Remove extra margins on mobile */
+  .py-16 {
+    @apply py-8;
+  }
+
+  .py-12 {
+    @apply py-6;
+  }
+
+  .py-8 {
+    @apply py-4;
+  }
+
+  .mb-16 {
+    @apply mb-8;
+  }
+
+  .mb-12 {
+    @apply mb-6;
+  }
+
+  .mb-8 {
+    @apply mb-4;
+  }
+}
+
+@media (min-width: 641px) {
+  .section-padding {
+    @apply py-16;
+  }
+
+  .section-margin {
+    @apply mb-16;
+  }
+}
+
+/* Better Section Spacing */
+section {
+  @apply w-full;
+}
+
+/* Force Dark Mode Overrides */
+.dark section.bg-white {
+  @apply bg-gray-800 !important;
+}
+
+.dark section.bg-gray-50 {
+  @apply bg-gray-900 !important;
+}
+
+.dark section.bg-gray-100 {
+  @apply bg-gray-800 !important;
+}
+
+.dark .hero-section {
+  @apply bg-gradient-to-br from-gray-900 to-gray-800 !important;
+}
+
+.dark .hero-section h1,
+.dark .hero-section h2,
+.dark .hero-section p {
+  @apply text-white !important;
+}
+
+.dark .hero-section h2 {
+  @apply text-blue-400 !important;
+}
+
+/* Dark Mode About Section */
+.dark #about {
+  @apply bg-gray-800 !important;
+}
+
+.dark #about h2 {
+  @apply text-white !important;
+}
+
+.dark #about p {
+  @apply text-gray-300 !important;
+}
+
+.dark #about .text-blue-600 {
+  @apply text-blue-400 !important;
+}
+
+.dark #about .text-gray-600 {
+  @apply text-gray-300 !important;
+}
+
+/* Dark Mode Results Section */
+.dark #results {
+  @apply bg-gray-900 !important;
+}
+
+.dark #results h2 {
+  @apply text-white !important;
+}
+
+.dark #results p {
+  @apply text-gray-300 !important;
+}
+
+/* Dark Mode Credentials Section */
+.dark #credentials {
+  @apply bg-gray-800 !important;
+}
+
+.dark #credentials h2 {
+  @apply text-white !important;
+}
+
+.dark #credentials h3 {
+  @apply text-white !important;
+}
+
+/* Dark Mode Services Section */
+.dark #services {
+  @apply bg-gray-800 !important;
+}
+
+.dark #services h2 {
+  @apply text-white !important;
+}
+
+/* Dark Mode Credibility Strip */
+.dark .bg-gray-100 {
+  @apply bg-gray-800 !important;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300 !important;
+}
+
+.dark .text-gray-400 {
+  @apply text-gray-500 !important;
+}
+
+/* Aggressive Dark Mode Overrides */
+.dark * {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+
+.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-gray-700 {
+  color: #d1d5db !important;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+
+.dark .border-gray-100 {
+  border-color: #374151 !important;
+}
+
+/* Remove horizontal scroll */
+.container {
+  @apply overflow-hidden;
+}
+
+/* Enhanced Button States */
+.btn-primary:active {
+  @apply transform scale-95;
+}
+
+.btn-secondary:active {
+  @apply transform scale-95;
+}
+
+/* Mobile Touch Enhancements */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    @apply min-h-[48px] touch-manipulation font-bold text-base;
+  }
+
+  .service-card {
+    @apply min-h-[44px] touch-manipulation;
+  }
+
+  .carousel-dot {
+    @apply min-h-[44px] min-w-[44px] touch-manipulation;
+  }
+
+  .nav-link {
+    @apply min-h-[48px] flex items-center touch-manipulation font-semibold;
+  }
+
+  .mobile-menu-btn {
+    @apply min-h-[48px] min-w-[48px] touch-manipulation;
+  }
+
+  /* Better mobile form */
+  .form-input {
+    @apply min-h-[48px] text-base;
+  }
+
+  .form-input-large {
+    @apply min-h-[56px] text-base px-6 py-4;
+  }
+
+  .contact-form {
+    @apply p-6;
+  }
+
+  /* Mobile button spacing */
+  .btn-primary,
+  .btn-secondary {
+    @apply py-3 px-6;
+  }
+}
+
+/* Improved Mobile Navigation */
+@media (max-width: 768px) {
+  #mobile-menu {
+    @apply bg-white/95 backdrop-blur-md border-t border-gray-200;
+  }
+
+  .nav-link {
+    @apply py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors;
+  }
+
+  /* Better mobile header */
+  header {
+    @apply px-0;
+  }
+
+  nav {
+    @apply px-4;
+  }
+
+  /* Mobile menu spacing */
+  #mobile-menu {
+    @apply px-4;
+  }
+
+  #mobile-menu .nav-link {
+    @apply py-4 px-4 text-lg font-semibold;
+  }
+}
+
+/* Better Header Spacing */
+header {
+  @apply w-full;
+}
+
+nav {
+  @apply w-full;
+}
+
+/* Better Mobile Typography */
+@media (max-width: 640px) {
+  .hero-section h1 {
+    @apply leading-[1.1] font-black;
+  }
+
+  .hero-section h2 {
+    @apply leading-[1.2] font-bold;
+  }
+
+  .hero-section p {
+    @apply leading-[1.4] font-medium;
+  }
+
+  /* Better mobile headings */
+  h1,
+  h2,
+  h3 {
+    @apply font-bold;
+  }
+
+  .text-4xl,
+  .text-3xl,
+  .text-2xl {
+    @apply font-bold;
+  }
+}
+
+/* Enhanced Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+.hero-section h1 {
+  @apply font-black;
+}
+
+.hero-section h2 {
+  @apply font-bold;
+}
+
+.hero-section p {
+  @apply font-medium;
+}
+
+/* Enhanced Mobile Carousel */
+@media (max-width: 640px) {
+  .carousel-container img {
+    @apply object-cover object-center;
+  }
+
+  .carousel-dot {
+    @apply bg-white/70;
+  }
+
+  .carousel-dot.active {
+    @apply bg-white;
+  }
+
+  /* Better mobile carousel */
+  .carousel-container {
+    @apply h-64;
+  }
+
+  .carousel-dot {
+    @apply w-4 h-4;
+  }
+
+  /* Mobile image optimization */
+  img {
+    @apply max-w-full h-auto;
+  }
+}
+
+/* Better Image Handling */
+img {
+  @apply max-w-full h-auto;
+}
+
+.carousel-container img {
+  @apply object-cover object-center;
+}
+
+/* Results Carousel Mobile Optimization */
+@media (max-width: 640px) {
+  #results-carousel {
+    @apply max-w-full;
+  }
+
+  #results-carousel .carousel-container > div {
+    @apply p-4;
+  }
+
+  #results-carousel .text-6xl {
+    @apply text-4xl;
+  }
+
+  #results-carousel .text-3xl {
+    @apply text-xl;
+  }
+
+  #results-carousel .text-lg {
+    @apply text-base;
+  }
+
+  #results-carousel .text-base {
+    @apply text-sm;
+  }
+
+  #results-carousel .p-8 {
+    @apply p-4;
+  }
+
+  #results-carousel .rounded-2xl {
+    @apply rounded-xl;
+  }
+
+  #results-carousel .gap-4 {
+    @apply gap-2;
+  }
+
+  #results-carousel .text-sm {
+    @apply text-xs;
+  }
+}
+
+/* Contact Section Mobile Optimization */
+@media (max-width: 640px) {
+  .contact-section {
+    @apply py-12;
+  }
+
+  .contact-section h2 {
+    @apply text-3xl;
+  }
+
+  .contact-section .grid {
+    @apply gap-8;
+  }
+
+  .contact-section .p-8 {
+    @apply p-6;
+  }
+
+  .contact-section .space-y-8 {
+    @apply space-y-6;
+  }
+
+  .contact-section .space-y-6 {
+    @apply space-y-4;
+  }
+
+  .contact-section .text-2xl {
+    @apply text-xl;
+  }
+
+  .contact-section .text-xl {
+    @apply text-lg;
+  }
+
+  .contact-section .text-lg {
+    @apply text-base;
+  }
+}
+
+/* Form Validation Styles */
+.form-input.error {
+  @apply border-red-500 ring-red-500;
+}
+
+.form-input.success {
+  @apply border-green-500 ring-green-500;
+}
+
+.error-message {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.success-message {
+  @apply text-green-600 text-sm mt-1;
+}
+
+/* Better Mobile Footer */
+@media (max-width: 640px) {
+  footer {
+    @apply py-8;
+  }
+
+  footer .grid {
+    @apply gap-6;
+  }
+
+  footer h3,
+  footer h4 {
+    @apply font-bold;
+  }
+
+  footer p {
+    @apply font-medium;
+  }
+}
+
+/* Overall Mobile Improvements */
+@media (max-width: 640px) {
+  /* Remove any horizontal scroll */
+  body,
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  /* Better section margins */
+  section + section {
+    @apply mt-0;
+  }
+
+  /* Better container padding */
+  .container {
+    @apply px-4;
+  }
+
+  /* Better button spacing */
+  .btn-primary,
+  .btn-secondary {
+    @apply w-full;
+  }
+
+  /* Better mobile spacing */
+  .space-y-6 > * + * {
+    @apply mt-4;
+  }
+
+  .space-y-8 > * + * {
+    @apply mt-6;
+  }
+
+  .space-y-12 > * + * {
+    @apply mt-8;
+  }
+
+  .space-y-16 > * + * {
+    @apply mt-12;
+  }
+}

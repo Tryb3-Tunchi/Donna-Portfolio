@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donna Patricia Hester - Investment Consultant</title>
+    <meta
+      name="description"
+      content="Crypto, Stocks & Multi-Asset Investment Consultant since 2016. Expert portfolio strategy, risk management, and execution advisory."
+    />
+    <script src="https://cdn.tailwindcss.com?version=3.4.7"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900 transition-colors duration-300">
+    <!-- Header / Navigation -->
+    <header
+      class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200"
+    >
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-blue-600">DPH</div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#results" class="nav-link">Results</a>
+            <a href="#credentials" class="nav-link">Credentials</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            >
+              <svg
+                id="moon-icon"
+                class="w-5 h-5 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                ></path>
+              </svg>
+              <svg
+                id="sun-icon"
+                class="w-5 h-5 text-gray-700 hidden"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+            </button>
+            <button class="md:hidden" id="mobile-menu-btn">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-4">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#results" class="nav-link">Results</a>
+            <a href="#credentials" class="nav-link">Credentials</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="hero-section pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-blue-50 to-indigo-100"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center"
+        >
+          <div class="space-y-6">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900">
+              Donna Patricia Hester
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-blue-600">
+              Crypto, Stocks & Multi-Asset Investment Consultant
+            </h2>
+            <p class="text-xl text-gray-600">
+              Since 2016 • Risk Management • Strategic Execution • Compliance
+              Focus
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <button class="btn-primary">Book a Consultation</button>
+              <a href="assets/profile.pdf" download class="btn-secondary">
+                Download Profile PDF
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              id="hero-carousel"
+              class="relative overflow-hidden rounded-2xl shadow-2xl"
+            >
+              <div
+                class="carousel-container flex transition-transform duration-500"
+              >
+                <img
+                  src="assets/donna1.jpg"
+                  alt="Donna Patricia Hester - Professional Headshot"
+                  class="w-full h-64 sm:h-80 md:h-96 object-cover"
+                />
+                <img
+                  src="assets/donna2.jpg"
+                  alt="Donna Patricia Hester - Professional Portrait"
+                  class="w-full h-64 sm:h-80 md:h-96 object-cover"
+                />
+                <img
+                  src="assets/donna1.jpg"
+                  alt="Donna Patricia Hester - Investment Consultant"
+                  class="w-full h-64 sm:h-80 md:h-96 object-cover"
+                />
+              </div>
+              <div
+                class="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
+              >
+                <button
+                  class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white/50 hover:bg-white/80 transition-colors"
+                  data-slide="0"
+                ></button>
+                <button
+                  class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white/50 hover:bg-white/80 transition-colors"
+                  data-slide="1"
+                ></button>
+                <button
+                  class="carousel-dot w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white/50 hover:bg-white/80 transition-colors"
+                  data-slide="2"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">About Donna</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Since 2016, Donna has been at the forefront of investment strategy,
+            specializing in crypto, stocks, and multi-asset portfolios. Her
+            approach combines rigorous risk management with innovative execution
+            strategies, always maintaining the highest compliance standards.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600 mb-2" data-counter="9">
+              0
+            </div>
+            <div class="text-lg text-gray-600">Years Active</div>
+          </div>
+          <div class="text-center">
+            <div
+              class="text-4xl font-bold text-blue-600 mb-2"
+              data-counter="120"
+            >
+              0
+            </div>
+            <div class="text-lg text-gray-600">Strategies Delivered</div>
+          </div>
+          <div class="text-center">
+            <div
+              class="text-4xl font-bold text-blue-600 mb-2"
+              data-counter="250"
+            >
+              0
+            </div>
+            <div class="text-lg text-gray-600">Client AUM Advised ($M+)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credibility Strip -->
+    <section class="py-8 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-6">
+          <p class="text-sm text-gray-600 mb-4">
+            Logos indicate industries and typical clientele; not endorsements.
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap justify-center items-center space-x-8 opacity-60"
+        >
+          <div class="text-2xl font-bold text-gray-400">Goldman Sachs</div>
+          <div class="text-2xl font-bold text-gray-400">J.P. Morgan</div>
+          <div class="text-2xl font-bold text-gray-400">BlackRock</div>
+          <div class="text-2xl font-bold text-gray-400">Coinbase</div>
+          <div class="text-2xl font-bold text-gray-400">Kraken</div>
+          <div class="text-2xl font-bold text-gray-400">Fidelity</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+          Services
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 flex-wrap-container"
+        >
+          <div class="service-card" data-service="portfolio">
+            <h3 class="text-xl font-semibold mb-3">Portfolio Strategy</h3>
+            <p class="text-gray-600 mb-4">
+              Equities, ETFs, Crypto portfolio construction and optimization.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+          <div class="service-card" data-service="risk">
+            <h3 class="text-xl font-semibold mb-3">Risk Management</h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive risk assessment and mitigation strategies.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+          <div class="service-card" data-service="research">
+            <h3 class="text-xl font-semibold mb-3">Research & Signals</h3>
+            <p class="text-gray-600 mb-4">
+              Market analysis and actionable investment signals.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+          <div class="service-card" data-service="execution">
+            <h3 class="text-xl font-semibold mb-3">Execution Advisory</h3>
+            <p class="text-gray-600 mb-4">
+              Trade execution optimization and slippage reduction.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+          <div class="service-card" data-service="crypto">
+            <h3 class="text-xl font-semibold mb-3">Crypto Integration</h3>
+            <p class="text-gray-600 mb-4">
+              Digital asset portfolio integration and management.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+          <div class="service-card" data-service="hnwi">
+            <h3 class="text-xl font-semibold mb-3">HNWI & Family Office</h3>
+            <p class="text-gray-600 mb-4">
+              High-net-worth individual and family office advisory.
+            </p>
+            <button class="text-blue-600 hover:text-blue-800">
+              Learn More →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">
+          Results & Case Studies
+        </h2>
+        <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          Real-world outcomes demonstrating our strategic approach to portfolio
+          optimization and risk management.
+        </p>
+        <div class="max-w-6xl mx-auto">
+          <div
+            id="results-carousel"
+            class="relative bg-white rounded-3xl shadow-2xl overflow-hidden"
+          >
+            <div
+              class="carousel-container flex transition-transform duration-500"
+            >
+              <div class="w-full flex-shrink-0 p-8">
+                <div class="text-center space-y-6">
+                  <div
+                    class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 border-2 border-blue-200"
+                  >
+                    <div
+                      class="text-6xl sm:text-7xl font-black text-blue-600 mb-4"
+                    >
+                      23%
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                      Portfolio Optimization
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                      Reduced portfolio slippage through improved execution
+                      strategies and advanced order management techniques.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                      <div
+                        class="inline-block bg-green-100 text-green-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Slippage Reduction
+                      </div>
+                      <div
+                        class="inline-block bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Order Management
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 max-w-2xl mx-auto">
+                      <strong>Client:</strong> Institutional Portfolio
+                      Manager<br />
+                      <strong>Timeframe:</strong> 6 months<br />
+                      <strong>Assets:</strong> $50M+ AUM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex-shrink-0 p-8">
+                <div class="text-center space-y-6">
+                  <div
+                    class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border-2 border-green-200"
+                  >
+                    <div
+                      class="text-6xl sm:text-7xl font-black text-green-600 mb-4"
+                    >
+                      50%
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                      Risk Management
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                      Improved Sharpe ratio from 1.2 to 1.8 through enhanced
+                      risk controls and dynamic portfolio rebalancing.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                      <div
+                        class="inline-block bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Sharpe Ratio Improvement
+                      </div>
+                      <div
+                        class="inline-block bg-emerald-100 text-emerald-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Risk Controls
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 max-w-2xl mx-auto">
+                      <strong>Client:</strong> Family Office<br />
+                      <strong>Timeframe:</strong> 12 months<br />
+                      <strong>Assets:</strong> $25M+ AUM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex-shrink-0 p-8">
+                <div class="text-center space-y-6">
+                  <div
+                    class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-8 border-2 border-purple-200"
+                  >
+                    <div
+                      class="text-6xl sm:text-7xl font-black text-purple-600 mb-4"
+                    >
+                      40%
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                      Crypto Integration
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                      Successfully integrated 15% crypto allocation with
+                      significant volatility reduction through strategic
+                      diversification.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                      <div
+                        class="inline-block bg-purple-100 text-purple-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Volatility Reduction
+                      </div>
+                      <div
+                        class="inline-block bg-violet-100 text-violet-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Strategic Diversification
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 max-w-2xl mx-auto">
+                      <strong>Client:</strong> High Net Worth Individual<br />
+                      <strong>Timeframe:</strong> 8 months<br />
+                      <strong>Assets:</strong> $15M+ AUM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex-shrink-0 p-8">
+                <div class="text-center space-y-6">
+                  <div
+                    class="bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl p-8 border-2 border-amber-200"
+                  >
+                    <div
+                      class="text-6xl sm:text-7xl font-black text-amber-600 mb-4"
+                    >
+                      35%
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                      Multi-Asset Strategy
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+                      Enhanced portfolio performance through strategic
+                      allocation across equities, bonds, commodities, and
+                      alternative investments.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                      <div
+                        class="inline-block bg-amber-100 text-amber-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Asset Allocation
+                      </div>
+                      <div
+                        class="inline-block bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full font-bold text-base"
+                      >
+                        Performance Enhancement
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 max-w-2xl mx-auto">
+                      <strong>Client:</strong> Corporate Pension Fund<br />
+                      <strong>Timeframe:</strong> 18 months<br />
+                      <strong>Assets:</strong> $100M+ AUM
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3"
+            >
+              <button
+                class="carousel-dot w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors"
+                data-slide="0"
+              ></button>
+              <button
+                class="carousel-dot w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors"
+                data-slide="1"
+              ></button>
+              <button
+                class="carousel-dot w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors"
+                data-slide="2"
+              ></button>
+              <button
+                class="carousel-dot w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors"
+                data-slide="3"
+              ></button>
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <p class="text-sm text-gray-500 italic">
+              Past performance not indicative of future results. Results may
+              vary based on market conditions and individual circumstances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">
+          Verified Expertise & Credentials
+        </h2>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch"
+        >
+          <!-- Certificate Showcase -->
+          <div class="space-y-6 pt-12 credentials-card">
+            <h3 class="text-2xl font-bold">Professional Certifications</h3>
+            <div
+              class="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-200 h-full flex flex-col"
+            >
+              <div class="content">
+                <img
+                  src="assets/donna_cert.jpg"
+                  alt="Donna's Professional Certificate"
+                  class="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <p class="text-gray-600 mb-4 font-medium">
+                  Certified Investment & Trading Consultant with specialized
+                  expertise in multi-asset portfolio management.
+                </p><div class="text-center mt-auto space-y-3">
+                <a href="assets/profile.pdf" download class="btn-primary w-full"
+                  >Download Full Profile</a
+                >
+                <a href="certificate.html" class="btn-secondary w-full"
+                  >View Certificate Details</a
+                >
+              </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- BrokerCheck Badge -->
+          <div class="space-y-6 pt-12 credentials-card">
+            <h3 class="text-2xl font-bold">Regulatory Compliance</h3>
+            <div
+              class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200 h-full flex flex-col"
+            >
+              <div class="content flex-grow">
+                <div class="text-center mb-6">
+                  <div
+                    class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg
+                      class="w-8 h-8"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-xl font-bold text-blue-900">
+                    FINRA Regulated Broker
+                  </h4>
+                  <p class="text-blue-700 font-medium">CRD#: 1992228</p>
+                  <p class="text-blue-600 text-sm mt-2">
+                    Fully compliant with regulatory standards and ongoing
+                    oversight requirements.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-auto text-center">
+                <a
+                  href="https://brokercheck.finra.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary  w-full"
+                >
+                  Verify on BrokerCheck
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 contact-section">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Ready to discuss your investment strategy? Let's connect and explore
+            how we can optimize your portfolio together.
+          </p>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 items-start">
+            <!-- Contact Information -->
+            <div class="space-y-8">
+              <div
+                class="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100"
+              >
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                  Contact Information
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                      <svg
+                        class="w-6 h-6 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm text-gray-500 uppercase tracking-wide font-semibold"
+                      >
+                        Email
+                      </p>
+                      <p class="text-lg font-bold text-gray-900">
+                        contact@donnahester.com
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-green-100 p-3 rounded-full">
+                      <svg
+                        class="w-6 h-6 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm text-gray-500 uppercase tracking-wide font-semibold"
+                      >
+                        Response Time
+                      </p>
+                      <p class="text-lg font-bold text-gray-900">
+                        Within 24 Hours
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-purple-100 p-3 rounded-full">
+                      <svg
+                        class="w-6 h-6 text-purple-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        ></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <p
+                        class="text-sm text-gray-500 uppercase tracking-wide font-semibold"
+                      >
+                        Location
+                      </p>
+                      <p class="text-lg font-bold text-gray-900">
+                        United States
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 border-2 border-blue-200"
+              >
+                <h4 class="text-xl font-bold text-blue-900 mb-4">
+                  Why Choose Donna?
+                </h4>
+                <ul class="space-y-3 text-blue-800">
+                  <li class="flex items-center space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <span class="font-medium">9+ Years of Experience</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <span class="font-medium">FINRA Regulated</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <span class="font-medium">Multi-Asset Expertise</span>
+                  </li>
+                  <li class="flex items-center space-x-3">
+                    <svg
+                      class="w-5 h-5 text-blue-600 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <span class="font-medium">Personalized Strategy</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div
+              class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100"
+            >
+              <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                Send Message
+              </h3>
+              <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label
+                      for="name"
+                      class="block text-sm font-bold text-gray-700 uppercase tracking-wide"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your full name"
+                      required
+                      class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-semibold text-base hover:border-gray-300"
+                    />
+                  </div>
+
+                  <div class="space-y-2">
+                    <label
+                      for="email"
+                      class="block text-sm font-bold text-gray-700 uppercase tracking-wide"
+                    >
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="your.email@example.com"
+                      required
+                      class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-semibold text-base hover:border-gray-300"
+                    />
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <label
+                    for="subject"
+                    class="block text-sm font-bold text-gray-700 uppercase tracking-wide"
+                  >
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Investment consultation, Portfolio review, etc."
+                    required
+                    class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-semibold text-base hover:border-gray-300"
+                  />
+                </div>
+
+                <div class="space-y-2">
+                  <label
+                    for="message"
+                    class="block text-sm font-bold text-gray-700 uppercase tracking-wide"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Tell us about your investment goals and how we can help..."
+                    required
+                    class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all duration-300 text-gray-800 font-semibold text-base hover:border-gray-300 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-5 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
+          <div>
+            <h3 class="text-2xl font-bold text-blue-400 mb-4">DPH</h3>
+            <p class="text-gray-300">
+              Professional investment consulting since 2016.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Connect</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-blue-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-blue-400">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Legal</h4>
+            <p class="text-sm text-gray-400">
+              Past performance not indicative of future results. Investment
+              advice provided for informational purposes only.
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            © <span id="copyright-year">2024</span> Donna Patricia Hester. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Service Modals -->
+    <div
+      id="service-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+    >
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8 relative">
+          <button
+            id="close-modal"
+            class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <div id="modal-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
