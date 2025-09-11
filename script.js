@@ -92,7 +92,8 @@ function initCarousel(carouselId, interval) {
   let intervalId;
 
   function showSlide(index) {
-    const offset = -((index * 100) / 3);
+    const totalSlides = carouselId === "results-carousel" ? 4 : 3;
+    const offset = -((index * 100) / totalSlides);
     container.style.transform = `translateX(${offset}%)`;
 
     // Update dots
@@ -104,7 +105,8 @@ function initCarousel(carouselId, interval) {
   }
 
   function nextSlide() {
-    currentSlide = (currentSlide + 1) % 3;
+    const totalSlides = carouselId === "results-carousel" ? 4 : 3;
+    currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
   }
 
@@ -141,9 +143,12 @@ function initCarousel(carouselId, interval) {
 
   function handleSwipe() {
     const threshold = 50;
+    const totalSlides = carouselId === "results-carousel" ? 4 : 3;
+    const maxSlide = totalSlides - 1;
+
     if (endX - startX > threshold && currentSlide > 0) {
       showSlide(currentSlide - 1);
-    } else if (startX - endX > threshold && currentSlide < 2) {
+    } else if (startX - endX > threshold && currentSlide < maxSlide) {
       showSlide(currentSlide + 1);
     }
   }

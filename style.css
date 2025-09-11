@@ -124,6 +124,7 @@ html {
 
 #results-carousel .carousel-container {
   width: 400%;
+  max-width: 100%;
 }
 
 /* Carousel Dots */
@@ -1307,43 +1308,55 @@ img {
 /* Results Carousel Mobile Optimization */
 @media (max-width: 640px) {
   #results-carousel {
-    @apply max-w-full;
+    @apply max-w-full mx-2;
+  }
+
+  #results-carousel .carousel-container {
+    @apply w-full;
   }
 
   #results-carousel .carousel-container > div {
-    @apply p-4;
+    @apply p-4 w-full;
   }
 
   #results-carousel .text-6xl {
-    @apply text-4xl;
+    @apply text-3xl;
   }
 
   #results-carousel .text-3xl {
-    @apply text-xl;
+    @apply text-lg;
   }
 
   #results-carousel .text-lg {
-    @apply text-base;
-  }
-
-  #results-carousel .text-base {
     @apply text-sm;
   }
 
+  #results-carousel .text-base {
+    @apply text-xs;
+  }
+
   #results-carousel .p-8 {
-    @apply p-4;
+    @apply p-3;
   }
 
   #results-carousel .rounded-2xl {
-    @apply rounded-xl;
+    @apply rounded-lg;
   }
 
   #results-carousel .gap-4 {
-    @apply gap-2;
+    @apply gap-1;
   }
 
   #results-carousel .text-sm {
     @apply text-xs;
+  }
+
+  #results-carousel .max-w-3xl {
+    @apply max-w-full;
+  }
+
+  #results-carousel .max-w-2xl {
+    @apply max-w-full;
   }
 }
 
