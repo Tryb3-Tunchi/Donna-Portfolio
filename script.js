@@ -343,29 +343,26 @@ function initContactForm() {
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // Let the form submit naturally to Formspree
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
 
-    if (validateForm()) {
-      // Simulate form submission
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
 
-      submitBtn.textContent = "Sending...";
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        showFormMessage(
-          "Message sent successfully! We'll get back to you soon.",
-          "success"
-        );
-        form.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 2000);
-    }
+    // Show success message after a short delay
+    setTimeout(() => {
+      showFormMessage(
+        "Message sent successfully! We'll get back to you soon.",
+        "success"
+      );
+      form.reset();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }, 1000);
   });
 
-  // Real-time validation
+  // Real-time validation for better UX
   const inputs = form.querySelectorAll("input, textarea");
   inputs.forEach((input) => {
     input.addEventListener("blur", () => validateField(input));
